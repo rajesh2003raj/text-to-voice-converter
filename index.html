@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Text to voice converter </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="container">
+        <h1> Text To Speech <span>converter</span> </h1>
+       <textarea placeholder=" Enter your Text ..........."></textarea>
+       <div class="rows">
+        <select></select>
+        <button><img src="play.png">Listen</button>
+       </div>
+      
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
+<!--
+     problem facing in css
+      background-image: url(dropdown.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: calc(100% - 20px);
+    background-position-y:20px ;
+-->
+<!-- problem facing in javascript
+    let speech=new SpeechSynthesisUtterance();
+    let voices=[];
+let voicesselect=document.querySelector("select");
+
+window.speechSynthesis.onvoiceschanged= ()=>{
+    voices=window.speechSynthesis.getVoices();
+    speech.voice=voices[0];
+    voices.forEach((voice,i)=>(voicesselect.options[i]=new Option(voice.name,i)));
+ voicesselect.addEventListener("change",()=>{
+    speech.voice=voices[voicesselect.value]
+ });
+     speech.text=document.querySelector("textarea").value;
+        window.speechSynthesis.speak(speech);
+-->
